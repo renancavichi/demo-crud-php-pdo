@@ -9,3 +9,5 @@ Initials: LP1<br>
 ## Description
 
 This project implements a basic CRUD with PDO. The main goal is  to demonstrate how to handle POST and GET requests with PHP. The backend receives the POST request and persists information in the MySQL database.
+
+[LinkedIn](https://br.linkedin.com/in/renancavichi)
