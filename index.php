@@ -6,12 +6,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>CRUD PDO</title>
 		<link rel="stylesheet" href="css/style.css" />
+		<script>
+			function openModal(){
+				const modal = document.querySelector('#modalAddProduct')
+				modal.style.display = 'flex'
+			}
+			function closeModal(){
+				const modal = document.querySelector('#modalAddProduct')
+				modal.style.display = 'none'
+			}
+		</script>
 	</head>
 	<body>
 		<main>
 				<header>
 					<h1>Products</h1>
-					<button>Add Product</button>
+					<button onclick="openModal()">Add Product</button>
 				</header>
 				<section id="product-list">
 					<div class="product">
@@ -28,5 +38,10 @@
 					</div>
 				</section>
 		</main>
+		<div class="modal" id="modalAddProduct" onclick="closeModal()">
+			<main>
+				<h1>Cadastrar Produto</h1>
+			</main>
+		</div>
 	</body>
 </html>
