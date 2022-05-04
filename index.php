@@ -51,7 +51,7 @@
 						<label>Title:</label><br>
 						<input class="full" type="text" placeholder="Product Title..." name="title" /><br>
 						<label>Price:</label><br>
-						<input type="text" placeholder="Price R$ 99,00..." name="price" /><br>
+						<input type="text" placeholder="R$ 99,00..." name="price" /><br>
 
 						<input type="submit" value="Add Product" />
 				</form>
