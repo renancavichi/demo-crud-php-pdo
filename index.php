@@ -11,9 +11,11 @@
 				const modal = document.querySelector('#modalAddProduct')
 				modal.style.display = 'flex'
 			}
-			function closeModal(){
-				const modal = document.querySelector('#modalAddProduct')
+			function closeModal(event){
+				if(event.target.id === 'modalAddProduct'){
+					const modal = document.querySelector('#modalAddProduct')
 				modal.style.display = 'none'
+				}
 			}
 		</script>
 	</head>
@@ -38,7 +40,7 @@
 					</div>
 				</section>
 		</main>
-		<div class="modal" id="modalAddProduct" onclick="closeModal()">
+		<div class="modal" id="modalAddProduct" onclick="closeModal(event)">
 			<main>
 				<h1>Cadastrar Produto</h1>
 			</main>
