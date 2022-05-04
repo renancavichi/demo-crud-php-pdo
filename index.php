@@ -6,18 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>CRUD PDO</title>
 		<link rel="stylesheet" href="css/style.css" />
-		<script>
-			function openModal(){
-				const modal = document.querySelector('#modalAddProduct')
-				modal.style.display = 'flex'
-			}
-			function closeModal(event){
-				if(event.target.id === 'modalAddProduct'){
-					const modal = document.querySelector('#modalAddProduct')
-				modal.style.display = 'none'
-				}
-			}
-		</script>
+		<script src="js/myscripts.js"></script>
 	</head>
 	<body>
 		<main>
@@ -27,12 +16,24 @@
 				</header>
 				<section id="product-list">
 					<div class="product">
+							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
+							<h3>Computador Dell 6 Cores</h3>
+							<span>R$ 99,78</span>
 					</div>
 					<div class="product">
+							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
+							<h3>Computador Dell 6 Cores</h3>
+							<span>R$ 99,78</span>
 					</div>
 					<div class="product">
+							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
+							<h3>Computador Dell 6 Cores</h3>
+							<span>R$ 99,78</span>
 					</div>
 					<div class="product">
+							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
+							<h3>Computador Pc Completo Intel 4gb</h3>
+							<span>R$ 99,78</span>
 					</div>
 					<div class="product">
 					</div>
@@ -42,7 +43,18 @@
 		</main>
 		<div class="modal" id="modalAddProduct" onclick="closeModal(event)">
 			<main>
-				<h1>Cadastrar Produto</h1>
+				<h1>Add Product</h1>
+				<form>
+						<label>Photo:</label><br>
+						<input class="full" type="text" placeholder="URL Photo..." name="photo" /><br>
+
+						<label>Title:</label><br>
+						<input class="full" type="text" placeholder="Product Title..." name="title" /><br>
+						<label>Price:</label><br>
+						<input type="text" placeholder="Price R$ 99,00..." name="price" /><br>
+
+						<input type="submit" value="Add Product" />
+				</form>
 			</main>
 		</div>
 	</body>
