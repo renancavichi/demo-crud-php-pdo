@@ -15,36 +15,33 @@
 					<button onclick="openModal()">Add Product</button>
 				</header>
 				<section id="product-list">
-					<div class="product">
-							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
-							<h3>Computador Dell 6 Cores</h3>
-							<span>R$ 99,78</span>
+					
+          <?php 
+          require('backend/helpers/conectaBD.php');
+
+          try{
+            $stmt = $conn->prepare("SELECT * FROM products;");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+          } catch(PDOException $e) {
+            echo "Erro ao buscar produtos no Banco de Dados: " . $e->getMessage();
+          }
+          ?>
+        
+          <?php foreach($result as $product){ ?>
+          <div class="product">
+							<img src="<?php echo $product['photo']; ?>" alt="<?php echo $product['title']; ?>" width="150px" height="150px"/>
+							<h3><?php echo $product['title']; ?></h3>
+							<span><?php echo $product['price']; ?></span>
 					</div>
-					<div class="product">
-							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
-							<h3>Computador Dell 6 Cores</h3>
-							<span>R$ 99,78</span>
-					</div>
-					<div class="product">
-							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
-							<h3>Computador Dell 6 Cores</h3>
-							<span>R$ 99,78</span>
-					</div>
-					<div class="product">
-							<img src="https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg" alt="Computador Dell 6 Cores" width="150px" height="150px"/>
-							<h3>Computador Pc Completo Intel 4gb</h3>
-							<span>R$ 99,78</span>
-					</div>
-					<div class="product">
-					</div>
-					<div class="product">
-					</div>
+          <?php } ?>
+
 				</section>
 		</main>
 		<div class="modal" id="modalAddProduct" onclick="closeModal(event)">
 			<main>
 				<h1>Add Product</h1>
-				<form>
+				<form method="POST" action="backend/insert-products.php">
 						<label>Photo:</label><br>
 						<input class="full" type="text" placeholder="URL Photo..." name="photo" /><br>
 
