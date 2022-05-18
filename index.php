@@ -30,7 +30,7 @@
         
           <?php foreach($result as $product){ ?>
             <div class="product">
-                <div class="delete"><img src="img/icon-trash.svg" alt="Delete Product" width="15px" height="15px"></div>
+                <a href="backend/delete-product.php?id=<?php echo $product['id']; ?>"><div class="delete"><img src="img/icon-trash.svg" alt="Delete Product" width="15px" height="15px"></div></a>
                 <div class="edit"><img src="img/icon-edit.svg" alt="Edit Product" width="15px" height="15px"></div>
                 <img src="<?php echo $product['photo']; ?>" alt="<?php echo $product['title']; ?>" width="150px" height="150px"/>
                 <h3><?php echo $product['title']; ?></h3>
