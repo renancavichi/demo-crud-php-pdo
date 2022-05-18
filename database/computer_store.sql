@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Maio-2022 às 21:53
+-- Tempo de geração: 18-Maio-2022 às 21:31
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.0.13
 
@@ -39,7 +39,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `photo`, `title`, `price`) VALUES
-(1, 'https://a-static.mlcdn.com.br/280x210/desktop-dell-vostro-vst-3268-a40m-7a-geracao-intel-core-i5-8gb-1tb-windows-10-pro-com-monitor-21-5/dell/cav3268w10p1801504br-p2/e02babafd6b9861e6bdd084bf2c8225f.jpg', 'Computador Dell 6 Cores', 'R$ 3.999,99');
+(2, 'https://a-static.mlcdn.com.br/618x463/computador-completo-intel-core-i5-8gb-hd-500gb-monitor-wifi-f-new/fnew/100000047/5609a2323dbf6a469e5c47769750ef55.jpg', 'Computador Intel 8 Core', 'R$ 2.500,00'),
+(3, 'https://a-static.mlcdn.com.br/618x463/computador-completo-intel-core-i7-8gb-hd-2tb-monitor-hdmi-19-5-easypc/3greentechnology/19832/db8df27d363046b3dd5a68af8447ffa9.jpg', 'Intel 64 Super Retina Display', 'R$ 9.999,20'),
+(7, 'https://a-static.mlcdn.com.br/618x463/kit-pc-gamer-smart-pc-smt80507-intel-core-i5-8gb-gtx-1050ti-4gb-1tb-monitor-215/shopinfo/1743200u/8b911c4acc71ae4b947e9788c9f2e024.jpg', 'PC Gamer Completo Imperiums i7', 'R$3.300,99'),
+(8, 'https://a-static.mlcdn.com.br/618x463/computador-completo-monitor-19-intel-core-i5-8gb-ssd-240gb-hdmi-webcam-windows-10-teclado-e-mouse-cafy-pc/cafypc/15187842752/140baa34a8bf240f7c442d5b3577e556.jpg', 'Intel Core i5 8GB SSD 240GB', 'R$ 2.252,34');
 
 --
 -- Índices para tabelas despejadas
@@ -59,7 +62,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

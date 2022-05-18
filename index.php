@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+    <title>CRUD PDO</title>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>CRUD PDO</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<script src="js/myscripts.js"></script>
 	</head>
@@ -33,13 +33,14 @@
                 <img src="img/icon-trash.svg" alt="Delete Product" width="15px" height="15px">
               </div>
             </a>
-            <div class="edit" onclick="
-            editProduct(
-            <?php echo $product['id']; ?>,
-            '<?php echo $product['photo']; ?>',
-            '<?php echo $product['title']; ?>',
-            '<?php echo $product['price']; ?>'
-            )"><img src="img/icon-edit.svg" alt="Edit Product" width="15px" height="15px"></div>
+            <div class="edit" onclick="editProduct(
+                <?php echo $product['id']; ?>,
+                '<?php echo $product['photo']; ?>',
+                '<?php echo $product['title']; ?>',
+                '<?php echo $product['price']; ?>'
+              )">
+              <img src="img/icon-edit.svg" alt="Edit Product" width="15px" height="15px">
+            </div>
             <img src="<?php echo $product['photo']; ?>" alt="<?php echo $product['title']; ?>" width="150px" height="150px"/>
             <h3><?php echo $product['title']; ?></h3>
             <span><?php echo $product['price']; ?></span>
