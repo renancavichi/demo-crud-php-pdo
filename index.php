@@ -29,11 +29,13 @@
           ?>
         
           <?php foreach($result as $product){ ?>
-          <div class="product">
-							<img src="<?php echo $product['photo']; ?>" alt="<?php echo $product['title']; ?>" width="150px" height="150px"/>
-							<h3><?php echo $product['title']; ?></h3>
-							<span><?php echo $product['price']; ?></span>
-					</div>
+            <div class="product">
+                <div class="delete"><img src="img/icon-trash.svg" alt="Delete Product" width="15px" height="15px"></div>
+                <div class="edit"><img src="img/icon-edit.svg" alt="Edit Product" width="15px" height="15px"></div>
+                <img src="<?php echo $product['photo']; ?>" alt="<?php echo $product['title']; ?>" width="150px" height="150px"/>
+                <h3><?php echo $product['title']; ?></h3>
+                <span><?php echo $product['price']; ?></span>
+			</div>
           <?php } ?>
 
 				</section>
