@@ -1,9 +1,9 @@
 # CRUD PHP with PDO
 
-Author: Renan Cavichi<br>
+Professor: Renan Cavichi<br>
 School: Federal Institute of Sao Paulo<br>
 Course: Computer Technician for Internet<br>
-Subject: Programming language<br>I
+Subject: Web Programming Language<br>I
 Initials: LP1<br>
 
 ## Description

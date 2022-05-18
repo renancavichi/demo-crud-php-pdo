@@ -13,13 +13,14 @@ $price = $_POST['price'];
 require('helpers/conectaBD.php');
 
 try {
-  $stmt = $conn->prepare("INSERT INTO products (photo, title, price) VALUES (:photo, :title, :price)");
-  $stmt->bindParam(':photo', $photo);
-  $stmt->bindParam(':title', $title);
-  $stmt->bindParam(':price', $price);
-  $stmt->execute();
-  echo "Produto Cadastrado com Sucesso!";
+	$stmt = $conn->prepare("INSERT INTO products (photo, title, price) VALUES (:photo, :title, :price)");
+	$stmt->bindParam(':photo', $photo);
+	$stmt->bindParam(':title', $title);
+	$stmt->bindParam(':price', $price);
+	$stmt->execute();
+	echo "Produto Cadastrado com Sucesso!<br>";
+  echo '<a href="../">Home</a>';
 } catch(PDOException $e) {
-  echo "Erro ao inserir produto no Banco de Dados: " . $e->getMessage();
+	echo "Erro ao inserir produto no Banco de Dados: " . $e->getMessage();
 }
 ?>
