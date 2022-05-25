@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>CRUD PDO</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/myscripts.js"></script>
+    <script src="js/crud-ajax.js"></script>
+	</head>
+	<body onload="loadProducts()">
+		<main>
+			<header>
+				<h1>Products</h1>
+				<button onclick="openModal('#modalAddProduct')">Add Product</button>
+			</header>
+			<section id="product-list">	
+
+		
+				
+			</section>
+		</main>
+		<div class="modal" id="modalAddProduct" onclick="closeModal(event)">
+			<main>
+				<h1>Add Product</h1>
+				<form method="POST" action="backend/insert-product.php">
+					<label>Photo:</label><br>
+					<input class="full" type="text" placeholder="URL Photo..." name="photo" /><br>
+					<label>Title:</label><br>
+					<input class="full" type="text" placeholder="Product Title..." name="title" /><br>
+					<label>Price:</label><br>
+					<input type="text" placeholder="R$ 99,00..." name="price" /><br>
+					<input type="submit" value="Add Product" />
+				</form>
+			</main>
+		</div>
+    <div class="modal" id="modalEditProduct" onclick="closeModal(event)">
+			<main>
+				<h1>Edit Product</h1>
+				<form method="POST" action="backend/edit-product.php">
+					<input type="hidden" name="id" value="" />
+          <label>Photo:</label><br>
+					<input class="full" type="text" placeholder="URL Photo..." name="photo" /><br>
+					<label>Title:</label><br>
+					<input class="full" type="text" placeholder="Product Title..." name="title" /><br>
+					<label>Price:</label><br>
+					<input type="text" placeholder="R$ 99,00..." name="price" /><br>
+					<input type="submit" value="Editar Product" />
+				</form>
+			</main>
+		</div>
+	</body>
+</html>
