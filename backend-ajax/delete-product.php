@@ -10,12 +10,11 @@ try {
 	$stmt->bindParam(':id', $id);
 	$stmt->execute();
 	if($stmt->rowCount()){
-		//echo "Produto removido com sucesso!<br>";
-    //echo '<a href="../">Home</a>';
-    header('Location: ../');
-	} else{
-		echo "Id do Produto não encontrado!";
-    echo '<a href="../">Home</a>';
+    $result['success']['message'] = 'Produto Deletado com Sucesso!';
+    echo json_encode($result);
+	} else {
+		$result['success']['message'] = 'ID não cadastrado!';
+    echo json_encode($result);
 	}
 } catch(PDOException $e) {
 	echo "Erro ao deletar produto no Banco de Dados: " . $e->getMessage();

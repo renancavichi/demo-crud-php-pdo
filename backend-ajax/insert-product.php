@@ -18,9 +18,8 @@ try {
 	$stmt->bindParam(':title', $title);
 	$stmt->bindParam(':price', $price);
 	$stmt->execute();
-	//echo "Produto Cadastrado com Sucesso!<br>";
-  //echo '<a href="../">Home</a>';
-  header('Location: ../');
+  $result['success']['message'] = 'Produto Cadastrado com Sucesso!';
+  echo json_encode($result);
 } catch(PDOException $e) {
 	echo "Erro ao inserir produto no Banco de Dados: " . $e->getMessage();
   echo '<a href="../">Home</a>';

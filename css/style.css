@@ -60,11 +60,11 @@ input[type=submit] {
   background: rgba(0, 0, 0, 0.71);
   color: #FFF;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .product .edit {
   right: 50px;
-  cursor: pointer;
 }
 
 .product span {
