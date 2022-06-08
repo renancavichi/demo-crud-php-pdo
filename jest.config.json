@@ -1,0 +1,7 @@
+{
+	"testEnvironment": "jsdom",
+	"verbose": true,
+	"testRegex": "/test/.*\\.test\\.js$",
+	"collectCoverage": true,
+	"collectCoverageFrom": ["js/**/*.{js,jsx}"]
+}

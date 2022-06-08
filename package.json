@@ -1,0 +1,23 @@
+{
+	"name": "crud-php-pdo",
+	"version": "1.0.0",
+	"description": "Simple PHP CRUD using PDO with Ajax and Form Action.",
+	"main": "index.js",
+	"scripts": {
+		"test": "npx jest --config jest.config.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/renancavichi/demo-crud-php-pdo.git"
+	},
+	"author": "Renan Cavichi",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/renancavichi/demo-crud-php-pdo/issues"
+	},
+	"homepage": "https://github.com/renancavichi/demo-crud-php-pdo#readme",
+	"devDependencies": {
+		"jest": "^28.1.1",
+		"jest-environment-jsdom": "^28.1.1"
+	}
+}

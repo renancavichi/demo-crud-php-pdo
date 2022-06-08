@@ -27,3 +27,5 @@ function closeModal(event) {
 		modal.style.display = 'none'
 	}
 }
+
+module.exports = editProduct

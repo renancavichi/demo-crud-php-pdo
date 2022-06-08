@@ -35,5 +35,8 @@
   "prettier.trailingComma": "none",
   "prettier.useTabs": true,
   "prettier.vueIndentScriptAndStyle": false,
-  "editor.detectIndentation": false
+  "editor.detectIndentation": false,
+  "jest.autoRun": "off",
+  "jest.showCoverageOnLoad": true,
+  "jest.coverageFormatter": "GutterFormatter"
 }
